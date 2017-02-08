@@ -15,13 +15,13 @@ public class Mahasiswa {
     private String status;
     private char[] nilai;
     private int i;
-    
+
     public Mahasiswa(){
     this.status = "Tidak Lulus";
     this.i = 0;
     this.nilai = new char[10];
 }
-    
+
     public Mahasiswa(String NIM, String nama){
         this.NIM = NIM;
         this.nama = nama;
@@ -29,7 +29,7 @@ public class Mahasiswa {
         this.i = 0;
         this.nilai = new char[10];
     }
-    
+
     public String getNIM() {
         return NIM;
     }
@@ -70,14 +70,14 @@ public class Mahasiswa {
     public void setI(int i) {
         this.i = i;
     }
-    
+
     public void addNilai(char nilai){
         if (i < 10) {
             this.nilai[i] = nilai;
             i++;
         }
     }
-    
+
     public String toString() {
         String mhs = NIM+", "+nama+", "+status+" = ";
         for (int j = 0; j < i; j++) {
@@ -85,7 +85,7 @@ public class Mahasiswa {
         }
         return mhs;
     }
-    
+
     public char cekNilai (Mahasiswa m){
         char x = 0;
         for (char l = 'A'; l < 'E'; l++){
